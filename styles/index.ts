@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     height: 100,
     borderColor: "lightgray",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 5,
     padding: 5,
   },
@@ -34,6 +34,15 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     textAlign: "center",
+    padding: 10,
+  },
+  card: {
+    borderWidth: 1,
+    backgroundColor: "white",
+    marginTop: 10,
+    width: "100%",
+    borderRadius: 5,
+    borderColor: "lightgray",
     padding: 10,
   },
 });

@@ -2,6 +2,7 @@ import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "@/styles";
 import { useCallback, useState } from "react";
 import { getMyPetGenerator } from "@/services/ai";
+import { MotiView } from "moti";
 
 export default function Index() {
   const [typedText, setTypedText] = useState("");
@@ -51,6 +52,16 @@ export default function Index() {
       >
         <Text style={styles.buttonText}>Buscar</Text>
       </TouchableOpacity>
+
+      {result && (
+        <MotiView
+          style={styles.card}
+          from={{ opacity: 0, translateX: 200 }}
+          animate={{ opacity: 1, translateX: 0 }}
+        >
+          <Text>{result}</Text>
+        </MotiView>
+      )}
     </View>
   );
 }
