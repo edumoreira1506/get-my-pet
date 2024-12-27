@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: "40%",
     textAlign: "center",
-    backgroundColor: "black",
     borderRadius: 5,
   },
   buttonText: {

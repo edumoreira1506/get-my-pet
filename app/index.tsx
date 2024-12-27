@@ -31,6 +31,7 @@ export default function Index() {
       </Text>
 
       <TextInput
+        editable={!isLoading}
         style={{ ...styles.input, fontStyle: typedText ? undefined : "italic" }}
         onChangeText={setTypedText}
         value={typedText}
@@ -40,7 +41,14 @@ export default function Index() {
         placeholder="Queria um pet terrestre, de preferência que ande sob quatro patas, não solte muito pelo e goste de ficar sozinho, pois passo a maior parte do tempo fora de casa trabalhando."
       />
 
-      <TouchableOpacity style={styles.button} onPress={onGetMyPetClick}>
+      <TouchableOpacity
+        style={{
+          ...styles.button,
+          backgroundColor: isLoading ? "gray" : "black",
+        }}
+        disabled={isLoading}
+        onPress={onGetMyPetClick}
+      >
         <Text style={styles.buttonText}>Buscar</Text>
       </TouchableOpacity>
     </View>
